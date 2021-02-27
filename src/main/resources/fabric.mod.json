@@ -1,29 +1,29 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "sugifabric",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Sugi Fabric",
+  "description": "A fabric port of sugiforest (originaly by kegare0127) now with extra stuff.",
   "authors": [
-    "Me!"
+    "Redd56"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
     "sources": "https://github.com/FabricMC/fabric-example-mod"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "GPL",
+  "icon": "assets/sugifabric/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "net.Redd56.sugifabric.Main"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "sugifabric.mixins.json"
   ],
 
   "depends": {
