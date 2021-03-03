@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "sugifabric:block/sapling_sugi",
+    "particle": "sugifabric:block/sapling_sugi"
+  }
+}

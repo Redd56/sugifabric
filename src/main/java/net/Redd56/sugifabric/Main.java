@@ -1,12 +1,14 @@
 package net.Redd56.sugifabric;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.*;
 import net.minecraft.client.color.world.BiomeColors;
+import net.minecraft.client.render.RenderLayer;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.sound.BlockSoundGroup;
@@ -40,12 +42,13 @@ public class Main implements ModInitializer {
 			.breakByTool(FabricToolTags.HOES));
 
 
-	public static final CustomSaplingBlock SAPLING_SUGI = new CustomSaplingBlock(new SaplingSugiGenerator(), AbstractBlock.Settings.of(
-					Material.PLANT)
-					.noCollision()
-					.ticksRandomly()
-					.breakInstantly()
-					.sounds(BlockSoundGroup.GRASS)
+	public static final CustomSaplingBlock SAPLING_SUGI = new CustomSaplingBlock(new SaplingSugiGenerator(), AbstractBlock.Settings.of
+			(Material.PLANT)
+			.noCollision()
+			.ticksRandomly()
+			.breakInstantly()
+			.nonOpaque()
+			.sounds(BlockSoundGroup.GRASS)
 	);
 
 
@@ -61,5 +64,8 @@ public class Main implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("sugifabric", "sapling_sugi"), new BlockItem(SAPLING_SUGI, new FabricItemSettings().group(ItemGroup.MISC)));
 		ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> BiomeColors.getGrassColor(view,pos),LEAVES_SUGI);
 		ColorProviderRegistry.ITEM.register((stack, tintIndex) -> MaterialColor.GRASS.color,LEAVES_SUGI);
+		BlockRenderLayerMap.INSTANCE.putBlock(SAPLING_SUGI, RenderLayer.getCutout());
+
+		ReddConfiguredFeatures.registerConfiguredFeatures();
 	}
 }

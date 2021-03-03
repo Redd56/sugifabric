@@ -2,6 +2,7 @@ package net.Redd56.sugifabric;
 
 import net.minecraft.block.sapling.SaplingGenerator;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
+import net.minecraft.world.gen.feature.ConfiguredFeatures;
 import net.minecraft.world.gen.feature.TreeFeatureConfig;
 import org.jetbrains.annotations.Nullable;
 
@@ -16,3 +17,4 @@ public class SaplingSugiGenerator  extends SaplingGenerator {
         return (ConfiguredFeature<TreeFeatureConfig, ?>) ReddConfiguredFeatures.TREE_SUGI;
     }
 }
+
