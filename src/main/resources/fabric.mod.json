@@ -19,6 +19,11 @@
   "entrypoints": {
     "main": [
       "net.Redd56.sugifabric.Main"
+    ],
+    "client": [
+      {
+        "value": "net.Redd56.sugifabric.ClientMain"
+      }
     ]
   },
   "mixins": [

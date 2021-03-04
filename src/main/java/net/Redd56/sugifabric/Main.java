@@ -89,7 +89,7 @@ public class Main implements ModInitializer {
 		registerLogBlocks();
 		registerOtherBlocks();
 		ReddConfiguredFeatures.registerConfiguredFeatures();
-		fabricSugiStrippables.strippableLogsFabricSugi();
+		FabricSugiStrippables.strippableLogsFabricSugi();
 	}
 	
 	private void registerLogBlocks() {
@@ -114,7 +114,7 @@ public class Main implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("sugifabric", "sapling_sugi"), new BlockItem(SAPLING_SUGI, new FabricItemSettings().group(ItemGroup.MISC)));
 		ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> BiomeColors.getGrassColor(view,pos),LEAVES_SUGI);
 		ColorProviderRegistry.ITEM.register((stack, tintIndex) -> MaterialColor.GRASS.color,LEAVES_SUGI);
-		ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> BiomeColors.getGrassColor(view,pos), LEAVES_FALLEN_SUGI);
+//		ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> BiomeColors.getGrassColor(view,pos), LEAVES_FALLEN_SUGI);
 		ColorProviderRegistry.ITEM.register((stack, tintIndex) -> MaterialColor.GRASS.color, LEAVES_FALLEN_SUGI);
 		BlockRenderLayerMap.INSTANCE.putBlock(SAPLING_SUGI, RenderLayer.getCutout());
 	}
