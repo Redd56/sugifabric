@@ -63,8 +63,16 @@ public class Main implements ModInitializer {
 			.nonOpaque()
 			.blockVision((state, world, pos) -> false)
 			.suffocates((state, world, pos) -> false)
-			.breakByTool(FabricToolTags.HOES));
+			.breakByTool(FabricToolTags.HOES)
+	);
 
+	public static final Block LEAVES_FALLEN_SUGI = new LeavesSugiFallen(FabricBlockSettings.of
+			(Material.LEAVES)
+			.strength(0.2F)
+			.sounds(BlockSoundGroup.GRASS)
+			.nonOpaque()
+			.breakByTool(FabricToolTags.HOES)
+			.suffocates((state, world, pos) -> false));
 
 	public static final CustomSaplingBlock SAPLING_SUGI = new CustomSaplingBlock(new SaplingSugiGenerator(), AbstractBlock.Settings.of
 			(Material.PLANT)
@@ -100,10 +108,14 @@ public class Main implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("sugifabric", "planks_sugi"), new BlockItem(PLANKS_SUGI, new FabricItemSettings().group(ItemGroup.MISC)));
 		Registry.register(Registry.BLOCK, new Identifier("sugifabric", "leaves_sugi"),LEAVES_SUGI);
 		Registry.register(Registry.ITEM, new Identifier("sugifabric", "leaves_sugi"), new BlockItem(LEAVES_SUGI, new FabricItemSettings().group(ItemGroup.MISC)));
+		Registry.register(Registry.BLOCK, new Identifier("sugifabric", "leaves_fallen_sugi"), LEAVES_FALLEN_SUGI);
+		Registry.register(Registry.ITEM, new Identifier("sugifabric", "leaves_fallen_sugi"), new BlockItem(LEAVES_FALLEN_SUGI, new FabricItemSettings().group(ItemGroup.MISC)));
 		Registry.register(Registry.BLOCK, new Identifier("sugifabric", "sapling_sugi"),SAPLING_SUGI);
 		Registry.register(Registry.ITEM, new Identifier("sugifabric", "sapling_sugi"), new BlockItem(SAPLING_SUGI, new FabricItemSettings().group(ItemGroup.MISC)));
 		ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> BiomeColors.getGrassColor(view,pos),LEAVES_SUGI);
 		ColorProviderRegistry.ITEM.register((stack, tintIndex) -> MaterialColor.GRASS.color,LEAVES_SUGI);
+		ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> BiomeColors.getGrassColor(view,pos), LEAVES_FALLEN_SUGI);
+		ColorProviderRegistry.ITEM.register((stack, tintIndex) -> MaterialColor.GRASS.color, LEAVES_FALLEN_SUGI);
 		BlockRenderLayerMap.INSTANCE.putBlock(SAPLING_SUGI, RenderLayer.getCutout());
 	}
 
