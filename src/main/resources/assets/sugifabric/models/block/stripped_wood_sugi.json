@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "sugifabric:block/stripped_log_sugi",
+    "side": "sugifabric:block/stripped_log_sugi"
+  }
+}

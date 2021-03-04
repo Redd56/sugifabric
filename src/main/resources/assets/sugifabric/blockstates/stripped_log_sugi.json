@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "sugifabric:block/stripped_log_sugi"
+    },
+    "axis=z": {
+      "model": "sugifabric:block/stripped_log_sugi",
+      "x": 90
+    },
+    "axis=x": {
+      "model": "sugifabric:block/stripped_log_sugi",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

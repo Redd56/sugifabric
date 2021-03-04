@@ -15,8 +15,32 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
+
 public class Main implements ModInitializer {
+
 	public static final Block LOG_SUGI = new PillarBlock(FabricBlockSettings.of
+			(Material.WOOD, MaterialColor.WOOD)
+			.strength(2.0f)
+			.sounds(BlockSoundGroup.WOOD)
+			.breakByTool(FabricToolTags.AXES)
+
+	);
+	public static final Block STRIPPED_LOG_SUGI = new PillarBlock(FabricBlockSettings.of
+			(Material.WOOD, MaterialColor.WOOD)
+			.strength(2.0f)
+			.sounds(BlockSoundGroup.WOOD)
+			.breakByTool(FabricToolTags.AXES)
+
+	);
+
+	public static final Block WOOD_SUGI = new PillarBlock(FabricBlockSettings.of
+			(Material.WOOD, MaterialColor.WOOD)
+			.strength(2.0f)
+			.sounds(BlockSoundGroup.WOOD)
+			.breakByTool(FabricToolTags.AXES)
+
+	);
+	public static final Block STRIPPED_WOOD_SUGI = new PillarBlock(FabricBlockSettings.of
 			(Material.WOOD, MaterialColor.WOOD)
 			.strength(2.0f)
 			.sounds(BlockSoundGroup.WOOD)
@@ -54,8 +78,18 @@ public class Main implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		// 								LOG SHIT
 		Registry.register(Registry.BLOCK, new Identifier("sugifabric", "log_sugi"), LOG_SUGI);
 		Registry.register(Registry.ITEM, new Identifier("sugifabric", "log_sugi"), new BlockItem(LOG_SUGI, new FabricItemSettings().group(ItemGroup.MISC)));
+		Registry.register(Registry.BLOCK, new Identifier("sugifabric", "stripped_log_sugi"),STRIPPED_LOG_SUGI);
+		Registry.register(Registry.ITEM, new Identifier("sugifabric", "stripped_log_sugi"), new BlockItem(STRIPPED_LOG_SUGI, new FabricItemSettings().group(ItemGroup.MISC)));
+		Registry.register(Registry.BLOCK, new Identifier("sugifabric", "wood_sugi"), WOOD_SUGI);
+		Registry.register(Registry.ITEM, new Identifier("sugifabric", "wood_sugi"), new BlockItem(WOOD_SUGI, new FabricItemSettings().group(ItemGroup.MISC)));
+		Registry.register(Registry.BLOCK, new Identifier("sugifabric", "stripped_wood_sugi"), STRIPPED_WOOD_SUGI);
+		Registry.register(Registry.ITEM, new Identifier("sugifabric", "stripped_wood_sugi"), new BlockItem(STRIPPED_WOOD_SUGI, new FabricItemSettings().group(ItemGroup.MISC)));
+
+
+						//		EVERYTHING ELSE
 		Registry.register(Registry.BLOCK, new Identifier("sugifabric", "planks_sugi"), PLANKS_SUGI);
 		Registry.register(Registry.ITEM, new Identifier("sugifabric", "planks_sugi"), new BlockItem(PLANKS_SUGI, new FabricItemSettings().group(ItemGroup.MISC)));
 		Registry.register(Registry.BLOCK, new Identifier("sugifabric", "leaves_sugi"),LEAVES_SUGI);
@@ -67,5 +101,10 @@ public class Main implements ModInitializer {
 		BlockRenderLayerMap.INSTANCE.putBlock(SAPLING_SUGI, RenderLayer.getCutout());
 
 		ReddConfiguredFeatures.registerConfiguredFeatures();
+		loadComplete();
+
+	}
+	private void loadComplete(){
+		fabricSugiStrippables.strippableLogsFabricSugi();
 	}
 }
