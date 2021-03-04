@@ -23,6 +23,8 @@ public class LeavesSugiFallen extends Block {
 
     @Override
     public void onPlaced(World world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
-       if(pos.)
+        if(world.getBlockState(pos.add(0,-1,0)).getMaterial().isSolid()){
+            super.onPlaced(world, pos, state, placer, itemStack);
+        }
     }
 }
