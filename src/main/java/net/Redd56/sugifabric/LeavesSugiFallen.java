@@ -29,5 +29,5 @@ public class LeavesSugiFallen extends FallingBlock implements Waterloggable{
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(Properties.WATERLOGGED);
     }
-
+    //should make things work
 }
