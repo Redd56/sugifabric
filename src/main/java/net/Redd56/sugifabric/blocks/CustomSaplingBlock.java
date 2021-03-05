@@ -1,4 +1,4 @@
-package net.Redd56.sugifabric;
+package net.Redd56.sugifabric.blocks;
 
 import net.minecraft.block.SaplingBlock;
 import net.minecraft.block.sapling.SaplingGenerator;

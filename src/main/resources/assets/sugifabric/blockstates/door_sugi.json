@@ -1,0 +1,124 @@
+{
+  "variants": {
+    "facing=east,half=lower,hinge=left,open=false": {
+      "model": "sugifabric:block/door_bottom_sugi"
+    },
+    "facing=south,half=lower,hinge=left,open=false": {
+      "model": "sugifabric:block/door_bottom_sugi",
+      "y": 90
+    },
+    "facing=west,half=lower,hinge=left,open=false": {
+      "model": "sugifabric:block/door_bottom_sugi",
+      "y": 180
+    },
+    "facing=north,half=lower,hinge=left,open=false": {
+      "model": "sugifabric:block/door_bottom_sugi",
+      "y": 270
+    },
+    "facing=east,half=lower,hinge=right,open=false": {
+      "model": "sugifabric:block/door_bottom_hinge_sugi"
+    },
+    "facing=south,half=lower,hinge=right,open=false": {
+      "model": "sugifabric:block/door_bottom_hinge_sugi",
+      "y": 90
+    },
+    "facing=west,half=lower,hinge=right,open=false": {
+      "model": "sugifabric:block/door_bottom_hinge_sugi",
+      "y": 180
+    },
+    "facing=north,half=lower,hinge=right,open=false": {
+      "model": "sugifabric:block/door_bottom_hinge_sugi",
+      "y": 270
+    },
+    "facing=east,half=lower,hinge=left,open=true": {
+      "model": "sugifabric:block/door_bottom_hinge_sugi",
+      "y": 90
+    },
+    "facing=south,half=lower,hinge=left,open=true": {
+      "model": "sugifabric:block/door_bottom_hinge_sugi",
+      "y": 180
+    },
+    "facing=west,half=lower,hinge=left,open=true": {
+      "model": "sugifabric:block/door_bottom_hinge_sugi",
+      "y": 270
+    },
+    "facing=north,half=lower,hinge=left,open=true": {
+      "model": "sugifabric:block/door_bottom_hinge_sugi"
+    },
+    "facing=east,half=lower,hinge=right,open=true": {
+      "model": "sugifabric:block/door_bottom_sugi",
+      "y": 270
+    },
+    "facing=south,half=lower,hinge=right,open=true": {
+      "model": "sugifabric:block/door_bottom_sugi"
+    },
+    "facing=west,half=lower,hinge=right,open=true": {
+      "model": "sugifabric:block/door_bottom_sugi",
+      "y": 90
+    },
+    "facing=north,half=lower,hinge=right,open=true": {
+      "model": "sugifabric:block/door_bottom_sugi",
+      "y": 180
+    },
+    "facing=east,half=upper,hinge=left,open=false": {
+      "model": "sugifabric:block/door_top_sugi"
+    },
+    "facing=south,half=upper,hinge=left,open=false": {
+      "model": "sugifabric:block/door_top_sugi",
+      "y": 90
+    },
+    "facing=west,half=upper,hinge=left,open=false": {
+      "model": "sugifabric:block/door_top_sugi",
+      "y": 180
+    },
+    "facing=north,half=upper,hinge=left,open=false": {
+      "model": "sugifabric:block/door_top_sugi",
+      "y": 270
+    },
+    "facing=east,half=upper,hinge=right,open=false": {
+      "model": "sugifabric:block/door_top_hinge_sugi"
+    },
+    "facing=south,half=upper,hinge=right,open=false": {
+      "model": "sugifabric:block/door_top_hinge_sugi",
+      "y": 90
+    },
+    "facing=west,half=upper,hinge=right,open=false": {
+      "model": "sugifabric:block/door_top_hinge_sugi",
+      "y": 180
+    },
+    "facing=north,half=upper,hinge=right,open=false": {
+      "model": "sugifabric:block/door_top_hinge_sugi",
+      "y": 270
+    },
+    "facing=east,half=upper,hinge=left,open=true": {
+      "model": "sugifabric:block/door_top_hinge_sugi",
+      "y": 90
+    },
+    "facing=south,half=upper,hinge=left,open=true": {
+      "model": "sugifabric:block/door_top_hinge_sugi",
+      "y": 180
+    },
+    "facing=west,half=upper,hinge=left,open=true": {
+      "model": "sugifabric:block/door_top_hinge_sugi",
+      "y": 270
+    },
+    "facing=north,half=upper,hinge=left,open=true": {
+      "model": "sugifabric:block/door_top_hinge_sugi"
+    },
+    "facing=east,half=upper,hinge=right,open=true": {
+      "model": "sugifabric:block/door_top_sugi",
+      "y": 270
+    },
+    "facing=south,half=upper,hinge=right,open=true": {
+      "model": "sugifabric:block/door_top_sugi"
+    },
+    "facing=west,half=upper,hinge=right,open=true": {
+      "model": "sugifabric:block/door_top_sugi",
+      "y": 90
+    },
+    "facing=north,half=upper,hinge=right,open=true": {
+      "model": "sugifabric:block/door_top_sugi",
+      "y": 180
+    }
+  }
+}

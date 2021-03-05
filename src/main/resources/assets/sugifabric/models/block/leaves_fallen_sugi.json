@@ -2,7 +2,8 @@
 	"credit": "Made with Blockbench",
 	"textures": {
 		"all": "sugifabric:block/leaves_sugi",
-		"particle": "sugifabric:block/leaves_sugi"
+		"particle": "sugifabric:block/leaves_sugi",
+		"parent": "block/block"
 	},
 	"elements": [
 		{
@@ -10,7 +11,7 @@
 			"to": [16, 2, 16],
 			"faces": {
 				"down":  { "uv": [ 0, 0, 16, 16 ], "texture": "#all", "tintindex": 0, "cullface": "down" },
-				"up":    { "uv": [ 0, 0, 16, 16 ], "texture": "#all", "tintindex": 0, "cullface": "up" },
+				"up":    { "uv": [ 0, 0, 16, 16 ], "texture": "#all", "tintindex": 0},
 				"north": { "uv": [ 0, 0, 16, 2 ], "texture": "#all", "tintindex": 0, "cullface": "north" },
 				"south": { "uv": [ 0, 0, 16, 2 ], "texture": "#all", "tintindex": 0, "cullface": "south" },
 				"west":  { "uv": [ 0, 0, 16, 2 ], "texture": "#all", "tintindex": 0, "cullface": "west" },

@@ -1,4 +1,4 @@
-package net.Redd56.sugifabric;
+package net.Redd56.sugifabric.blocks;
 import net.minecraft.block.*;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
@@ -8,6 +8,9 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
+import net.minecraft.world.World;
+
+import java.util.Random;
 
 public class LeavesSugiFallen extends FallingBlock implements Waterloggable{
     public LeavesSugiFallen(AbstractBlock.Settings settings) {
@@ -29,5 +32,10 @@ public class LeavesSugiFallen extends FallingBlock implements Waterloggable{
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(Properties.WATERLOGGED);
     }
+
+//    @Override
+//    public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
+//        super.randomDisplayTick(state, world, pos, random);
+//    }
     //should make things work
 }
