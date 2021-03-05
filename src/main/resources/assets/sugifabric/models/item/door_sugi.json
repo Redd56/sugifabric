@@ -1,0 +1,7 @@
+
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "sugifabric:item/door_sugi"
+  }
+}

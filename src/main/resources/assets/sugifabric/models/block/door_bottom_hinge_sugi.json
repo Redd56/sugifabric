@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_bottom_rh",
+  "textures": {
+    "bottom": "sugifabric:block/door_bottom_sugi",
+    "top": "sugifabric:block/door_top_sugi"
+  }
+}

@@ -1,6 +1,6 @@
 package net.Redd56.sugifabric;
 
-import net.Redd56.sugifabric.blocks.CustomSaplingBlock;
+import net.Redd56.sugifabric.blocks.SaplingSugi;
 import net.Redd56.sugifabric.blocks.DoorSugi;
 import net.Redd56.sugifabric.blocks.LeavesSugiFallen;
 import net.fabricmc.api.ModInitializer;
@@ -83,7 +83,7 @@ public class Main implements ModInitializer {
 			.breakByTool(FabricToolTags.HOES)
 			.suffocates((state, world, pos) -> false));
 
-	public static final CustomSaplingBlock SAPLING_SUGI = new CustomSaplingBlock(new SaplingSugiGenerator(), AbstractBlock.Settings.of
+	public static final SaplingSugi SAPLING_SUGI = new SaplingSugi(new SaplingSugiGenerator(), AbstractBlock.Settings.of
 			(Material.PLANT)
 			.noCollision()
 			.ticksRandomly()
@@ -128,6 +128,7 @@ public class Main implements ModInitializer {
 		Registry.register(Registry.BLOCK, new Identifier("sugifabric", "sapling_sugi"),SAPLING_SUGI);
 		Registry.register(Registry.ITEM, new Identifier("sugifabric", "sapling_sugi"), new BlockItem(SAPLING_SUGI, new FabricItemSettings().group(ItemGroup.MISC)));
 		Registry.register(Registry.BLOCK, new Identifier("sugifabric","door_sugi"),DOOR_SUGI);
+		Registry.register(Registry.ITEM, new Identifier("sugifabric", "door_sugi"), new BlockItem(DOOR_SUGI, new FabricItemSettings().group(ItemGroup.MISC)));
 	}
 	private void registerOtherBlockStuff() {
 		ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> BiomeColors.getGrassColor(view,pos),LEAVES_SUGI);
@@ -136,5 +137,6 @@ public class Main implements ModInitializer {
 		ColorProviderRegistry.ITEM.register((stack, tintIndex) -> MaterialColor.GRASS.color, LEAVES_FALLEN_SUGI);
 		BlockRenderLayerMap.INSTANCE.putBlock(SAPLING_SUGI, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(LEAVES_FALLEN_SUGI, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(DOOR_SUGI, RenderLayer.getCutout());
 	}
 }
