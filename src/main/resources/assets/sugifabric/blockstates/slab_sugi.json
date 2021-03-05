@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "sugifabric:block/slab_sugi"
+    },
+    "type=top": {
+      "model": "sugifabric:block/slab_top_sugi"
+    },
+    "type=double": {
+      "model": "sugifabric:block/planks_sugi"
+    }
+  }
+}

@@ -96,6 +96,10 @@ public class Main implements ModInitializer {
 			(Material.WOOD, MaterialColor.BROWN)
 			.sounds(BlockSoundGroup.WOOD).strength(2.0f, 3.0f).nonOpaque());
 
+	public static final Block SLAB_SUGI = new SlabBlock(FabricBlockSettings.of(Material.WOOD)
+			.sounds(BlockSoundGroup.WOOD)
+			.strength(2.0f, 3.0f));
+
 
 	@Override
 	public void onInitialize() {
@@ -129,6 +133,8 @@ public class Main implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("sugifabric", "sapling_sugi"), new BlockItem(SAPLING_SUGI, new FabricItemSettings().group(ItemGroup.MISC)));
 		Registry.register(Registry.BLOCK, new Identifier("sugifabric","door_sugi"),DOOR_SUGI);
 		Registry.register(Registry.ITEM, new Identifier("sugifabric", "door_sugi"), new BlockItem(DOOR_SUGI, new FabricItemSettings().group(ItemGroup.MISC)));
+		Registry.register(Registry.BLOCK, new Identifier("sugifabric","slab_sugi"),SLAB_SUGI);
+		Registry.register(Registry.ITEM, new Identifier("sugifabric", "slab_sugi"), new BlockItem(SLAB_SUGI, new FabricItemSettings().group(ItemGroup.MISC)));
 	}
 	private void registerOtherBlockStuff() {
 		ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> BiomeColors.getGrassColor(view,pos),LEAVES_SUGI);
