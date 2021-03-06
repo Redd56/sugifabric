@@ -1,6 +1,6 @@
 {
   "replace": "false",
   "values": [
-    "#sugifabric:logs_sugi"
+    "sugifabric:door_sugi"
   ]
 }

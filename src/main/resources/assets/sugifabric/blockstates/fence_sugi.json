@@ -1,0 +1,48 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "sugifabric:block/fence_post_sugi"
+      }
+    },
+    {
+      "when": {
+        "north": "true"
+      },
+      "apply": {
+        "model": "sugifabric:block/fence_sugi",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "south": "true"
+      },
+      "apply": {
+        "model": "sugifabric:block/fence_sugi",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "west": "true"
+      },
+      "apply": {
+        "model": "sugifabric:block/fence_sugi",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "true"
+      },
+      "apply": {
+        "model": "sugifabric:block/fence_sugi",
+        "y": 90,
+        "uvlock": true
+      }
+    }
+  ]
+}

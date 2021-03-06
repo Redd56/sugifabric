@@ -1,0 +1,7 @@
+{
+"parent": "block/fence_side",
+"textures": {
+"texture": "sugifabric:block/planks_sugi",
+"particle": "sugifabric:block/planks_sugi"
+}
+}

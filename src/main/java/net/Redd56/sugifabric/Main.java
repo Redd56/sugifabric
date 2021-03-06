@@ -23,33 +23,17 @@ public class Main implements ModInitializer {
 
 	//			LOGS
 
-	public static final Block LOG_SUGI = new PillarBlock(FabricBlockSettings.of
-			(Material.WOOD, MaterialColor.WOOD)
-			.strength(2.0f)
-			.sounds(BlockSoundGroup.WOOD)
-			.breakByTool(FabricToolTags.AXES)
+	public static final Block LOG_SUGI = new PillarBlock(FabricBlockSettings.of(Material.WOOD, MaterialColor.WOOD).strength(2.0f).sounds(BlockSoundGroup.WOOD).breakByTool(FabricToolTags.AXES)
 
 	);
-	public static final Block STRIPPED_LOG_SUGI = new PillarBlock(FabricBlockSettings.of
-			(Material.WOOD, MaterialColor.WOOD)
-			.strength(2.0f)
-			.sounds(BlockSoundGroup.WOOD)
-			.breakByTool(FabricToolTags.AXES)
+	public static final Block STRIPPED_LOG_SUGI = new PillarBlock(FabricBlockSettings.of(Material.WOOD, MaterialColor.WOOD).strength(2.0f).sounds(BlockSoundGroup.WOOD).breakByTool(FabricToolTags.AXES)
 
 	);
 
-	public static final Block WOOD_SUGI = new PillarBlock(FabricBlockSettings.of
-			(Material.WOOD, MaterialColor.WOOD)
-			.strength(2.0f)
-			.sounds(BlockSoundGroup.WOOD)
-			.breakByTool(FabricToolTags.AXES)
+	public static final Block WOOD_SUGI = new PillarBlock(FabricBlockSettings.of(Material.WOOD, MaterialColor.WOOD).strength(2.0f).sounds(BlockSoundGroup.WOOD).breakByTool(FabricToolTags.AXES)
 
 	);
-	public static final Block STRIPPED_WOOD_SUGI = new PillarBlock(FabricBlockSettings.of
-			(Material.WOOD, MaterialColor.WOOD)
-			.strength(2.0f)
-			.sounds(BlockSoundGroup.WOOD)
-			.breakByTool(FabricToolTags.AXES)
+	public static final Block STRIPPED_WOOD_SUGI = new PillarBlock(FabricBlockSettings.of(Material.WOOD, MaterialColor.WOOD).strength(2.0f).sounds(BlockSoundGroup.WOOD).breakByTool(FabricToolTags.AXES)
 
 	);
 
@@ -57,48 +41,19 @@ public class Main implements ModInitializer {
 
 
 		// OTHER BLOCKS
-	public static final Block PLANKS_SUGI = new Block(FabricBlockSettings.of
-			(Material.WOOD, MaterialColor.BROWN)
-			.strength(2.0F, 3.0F)
-			.sounds(BlockSoundGroup.WOOD)
-			.breakByTool(FabricToolTags.AXES)
-	);
+	public static final Block PLANKS_SUGI = new Block(FabricBlockSettings.of(Material.WOOD, MaterialColor.SAND).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).breakByTool(FabricToolTags.AXES));
 
-	public static final Block LEAVES_SUGI = new LeavesBlock(FabricBlockSettings.of
-			(Material.LEAVES)
-			.strength(0.2F)
-			.ticksRandomly()
-			.sounds(BlockSoundGroup.GRASS)
-			.nonOpaque()
-			.blockVision((state, world, pos) -> false)
-			.suffocates((state, world, pos) -> false)
-			.breakByTool(FabricToolTags.HOES)
-	);
+	public static final Block LEAVES_SUGI = new LeavesBlock(FabricBlockSettings.of(Material.LEAVES).strength(0.2F).ticksRandomly().sounds(BlockSoundGroup.GRASS).nonOpaque().blockVision((state, world, pos) -> false).suffocates((state, world, pos) -> false).breakByTool(FabricToolTags.HOES));
 
-	public static final Block LEAVES_FALLEN_SUGI = new LeavesSugiFallen(FabricBlockSettings.of
-			(Material.LEAVES)
-			.strength(0.2F)
-			.sounds(BlockSoundGroup.GRASS)
-			.nonOpaque()
-			.breakByTool(FabricToolTags.HOES)
-			.suffocates((state, world, pos) -> false));
+	public static final Block LEAVES_FALLEN_SUGI = new LeavesSugiFallen(FabricBlockSettings.of(Material.LEAVES).strength(0.2F).sounds(BlockSoundGroup.GRASS).nonOpaque().breakByTool(FabricToolTags.HOES).suffocates((state, world, pos) -> false));
 
-	public static final SaplingSugi SAPLING_SUGI = new SaplingSugi(new SaplingSugiGenerator(), AbstractBlock.Settings.of
-			(Material.PLANT)
-			.noCollision()
-			.ticksRandomly()
-			.breakInstantly()
-			.nonOpaque()
-			.sounds(BlockSoundGroup.GRASS)
-	);
+	public static final SaplingSugi SAPLING_SUGI = new SaplingSugi(new SaplingSugiGenerator(), AbstractBlock.Settings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().nonOpaque().sounds(BlockSoundGroup.GRASS));
 
-	public static final Block DOOR_SUGI = new DoorSugi(FabricBlockSettings.of
-			(Material.WOOD, MaterialColor.BROWN)
-			.sounds(BlockSoundGroup.WOOD).strength(2.0f, 3.0f).nonOpaque());
+	public static final Block DOOR_SUGI = new DoorSugi(FabricBlockSettings.of(Material.WOOD, MaterialColor.SAND).sounds(BlockSoundGroup.WOOD).strength(2.0f, 3.0f).nonOpaque());
 
-	public static final Block SLAB_SUGI = new SlabBlock(FabricBlockSettings.of(Material.WOOD)
-			.sounds(BlockSoundGroup.WOOD)
-			.strength(2.0f, 3.0f));
+	public static final Block SLAB_SUGI = new SlabBlock(FabricBlockSettings.of(Material.WOOD, MaterialColor.SAND).sounds(BlockSoundGroup.WOOD).strength(2.0f, 3.0f));
+
+	public static final Block FENCE_SUGI = new FenceBlock(FabricBlockSettings.of(Material.WOOD, MaterialColor.SAND).sounds(BlockSoundGroup.WOOD).strength(2.0f, 3.0f));
 
 
 	@Override
@@ -135,6 +90,8 @@ public class Main implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("sugifabric", "door_sugi"), new BlockItem(DOOR_SUGI, new FabricItemSettings().group(ItemGroup.MISC)));
 		Registry.register(Registry.BLOCK, new Identifier("sugifabric","slab_sugi"),SLAB_SUGI);
 		Registry.register(Registry.ITEM, new Identifier("sugifabric", "slab_sugi"), new BlockItem(SLAB_SUGI, new FabricItemSettings().group(ItemGroup.MISC)));
+		Registry.register(Registry.BLOCK, new Identifier("sugifabric","fence_sugi"),FENCE_SUGI);
+		Registry.register(Registry.ITEM, new Identifier("sugifabric", "fence_sugi"), new BlockItem(FENCE_SUGI, new FabricItemSettings().group(ItemGroup.MISC)));
 	}
 	private void registerOtherBlockStuff() {
 		ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> BiomeColors.getGrassColor(view,pos),LEAVES_SUGI);

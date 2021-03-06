@@ -4,7 +4,7 @@
   "version": "${version}",
 
   "name": "Sugi Fabric",
-  "description": "A fabric port of sugiforest (originaly by kegare0127) now with extra stuff.",
+  "description": "A fabric port of sugiforest (originaly by kegare0127) now with extra stuff./n Credit to kegare0127 for the planks, default log (top and bottom), sapling, and leaves texture from the original mod! ",
   "authors": [
     "Redd56"
   ],
