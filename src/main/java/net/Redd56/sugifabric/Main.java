@@ -55,6 +55,8 @@ public class Main implements ModInitializer {
 
 	public static final Block FENCE_SUGI = new FenceBlock(FabricBlockSettings.of(Material.WOOD, MaterialColor.SAND).sounds(BlockSoundGroup.WOOD).strength(2.0f, 3.0f));
 
+	public static final Block FENCE_GATE_SUGI =  new FenceGateBlock(FabricBlockSettings.of(Material.WOOD, MaterialColor.SAND).sounds(BlockSoundGroup.WOOD).strength(2.0f, 3.0f));
+
 
 	@Override
 	public void onInitialize() {
@@ -92,11 +94,12 @@ public class Main implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("sugifabric", "slab_sugi"), new BlockItem(SLAB_SUGI, new FabricItemSettings().group(ItemGroup.MISC)));
 		Registry.register(Registry.BLOCK, new Identifier("sugifabric","fence_sugi"),FENCE_SUGI);
 		Registry.register(Registry.ITEM, new Identifier("sugifabric", "fence_sugi"), new BlockItem(FENCE_SUGI, new FabricItemSettings().group(ItemGroup.MISC)));
+		Registry.register(Registry.BLOCK, new Identifier("sugifabric","fence_gate_sugi"), FENCE_GATE_SUGI);
 	}
 	private void registerOtherBlockStuff() {
 		ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> BiomeColors.getGrassColor(view,pos),LEAVES_SUGI);
 		ColorProviderRegistry.ITEM.register((stack, tintIndex) -> MaterialColor.GRASS.color,LEAVES_SUGI);
-//		ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> BiomeColors.getGrassColor(view,pos), LEAVES_FALLEN_SUGI);
+		ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> BiomeColors.getGrassColor(view,pos), LEAVES_FALLEN_SUGI);
 		ColorProviderRegistry.ITEM.register((stack, tintIndex) -> MaterialColor.GRASS.color, LEAVES_FALLEN_SUGI);
 		BlockRenderLayerMap.INSTANCE.putBlock(SAPLING_SUGI, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(LEAVES_FALLEN_SUGI, RenderLayer.getCutout());

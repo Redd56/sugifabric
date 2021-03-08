@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "sugifabric:log_sugi",
+    "sugifabric:stripped_log_sugi",
+    "sugifabric:wood_sugi",
+    "sugifabric:stripped_wood_sugi"
+  ]
+}
